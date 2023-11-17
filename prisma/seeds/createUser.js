@@ -13,7 +13,6 @@ const fakerUser = () => ({
 
 
 async function main() {
-    prisma.$connect()
     console.log('Starting seeds')
     const createdUser = await prisma.user.create({
         data: fakerUser()
